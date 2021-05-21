@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import Axios from "axios";
 import ModalComponent from "../components/modal";
+
 export default function Home() {
   const [data, setData] = useState({
     name: "",
@@ -95,10 +96,7 @@ export default function Home() {
                     />
                   </div>
                   <div className={`col menu- ${showMenuList ? "show" : ""}`}>
-                    <ul
-                      
-                      className=" text-center text-md-right mobileMenu"
-                    >
+                    <ul className=" text-center text-md-right mobileMenu">
                       <li className="links-" data="home">
                         <a href="#!" className="px-3">
                           Home
@@ -146,7 +144,7 @@ export default function Home() {
                   options={{
                     strings: [
                       "frontend developer",
-                      " search engine optimization expert",
+                      " search engine optimization specialist",
                     ],
                     autoStart: true,
                     loop: true,
@@ -160,7 +158,7 @@ export default function Home() {
           </div>
         </div>
         <Link href="#skill">
-          <a  className="scll-cont d-inline-block" id="about-me">
+          <a className="scll-cont d-inline-block" id="about-me">
             <div className="scroll-bottom links-" data="about-us"></div>
           </a>
         </Link>
@@ -169,12 +167,9 @@ export default function Home() {
       {/* <!-- serivices --> */}
       <div>
         <div className="col-md-9 mx-auto my-5 text-centers services-s text-center">
-          <h2 >About me</h2>
+          <h2>About me</h2>
         </div>
-        <div
-          
-          className="col-xl-9 col-lg-10 col-md-11 mx-auto  pb-5"
-        >
+        <div className="col-xl-9 col-lg-10 col-md-11 mx-auto  pb-5">
           <div className="row background services">
             <div className="col-md-7 ">
               <img
@@ -195,9 +190,10 @@ export default function Home() {
                 libraries and frameworks.
               </p>
               <p>
-                We build student educational carred with alot of examination
-                avalable in our platform, we build lot of good interface for
-                student so thta i can be easy to use for theme
+                And also a highly driven and results-oriented SEO Specialist.
+                Adept in original content development search friendly
+                architecture solutions and keyword research. Possesses excellent
+                problem-solving and analytical thinking skills.
               </p>
               <a href="" className="btn fancy px-5 mt-5">
                 Visit{" "}
@@ -220,10 +216,7 @@ export default function Home() {
               <h2 className="text-left">Skills</h2>
               <h3 className="primary-color pb-4 br-none">Web Development</h3>
             </div>
-            <div
-             
-              className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
-            >
+            <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="">
                 <a href="" className="text-center">
                   {/* <Rotate bottom left> */}
@@ -237,10 +230,7 @@ export default function Home() {
               {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
               <h3 className="mt-3">HTML</h3> {/* </Bounce> */}
             </div>
-            <div
-              
-              className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
-            >
+            <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="">
                 <a href="" className="text-center">
                   {/* <Rotate bottom left> */}
@@ -254,10 +244,7 @@ export default function Home() {
               {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
               <h3 className="mt-3">Pug</h3> {/* </Bounce> */}
             </div>
-            <div
-              
-              className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
-            >
+            <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="">
                 <a href="" className="text-center">
                   {/* <Rotate top left> */}
@@ -273,10 +260,7 @@ export default function Home() {
               {/* </Bounce> */}
             </div>
 
-            <div
-              
-              className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
-            >
+            <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="">
                 <a href="" className="text-center">
                   {/* <Rotate bottom left> */}
@@ -290,10 +274,7 @@ export default function Home() {
               {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
               <h3 className="mt-3">Sass</h3> {/* </Bounce> */}
             </div>
-            <div
-              
-              className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
-            >
+            <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="">
                 <a href="" className="text-center">
                   {/* <Rotate bottom left> */}
@@ -307,10 +288,7 @@ export default function Home() {
               {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
               <h3 className="mt-3">Bootstrap</h3> {/* </Bounce> */}
             </div>
-            <div
-              
-              className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
-            >
+            <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="">
                 <a className="text-center">
                   {/* <Rotate top right> */}
@@ -325,10 +303,7 @@ export default function Home() {
               <h3 className="mt-3">JavaScript</h3>
               {/* </Bounce> */}
             </div>
-            <div
-              
-              className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
-            >
+            <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="">
                 <a href="" className="text-center">
                   {/* <Rotate bottom left> */}
@@ -343,10 +318,7 @@ export default function Home() {
               <h3 className="mt-3">Reactjs</h3>
               {/* </Bounce> */}
             </div>
-            <div
-              
-              className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
-            >
+            <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="">
                 <a href="" className="text-center">
                   {/* <Rotate bottom right> */}
@@ -361,10 +333,7 @@ export default function Home() {
               <h3 className="mt-3">Gatsby.js</h3>
               {/* </Bounce> */}
             </div>
-            <div
-              
-              className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
-            >
+            <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="">
                 <a href="" className="text-center">
                   {/* <Rotate top right> */}
@@ -378,10 +347,7 @@ export default function Home() {
               {/* <Bounce enter={true} mirror={true} opposite={true} bottom cascade> */}{" "}
               <h3 className="mt-3">Next.js</h3> {/* </Bounce> */}
             </div>
-            <div
-              
-              className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
-            >
+            <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="">
                 <a href="" className="text-center">
                   {/* <Rotate bottom left> */}
@@ -403,10 +369,7 @@ export default function Home() {
             </h3>
 
             <div className="row">
-              <div
-                
-                className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
-              >
+              <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
                 <Link href="">
                   <a href="" className="text-center">
                     {/* <Rotate bottom left> */}
@@ -420,10 +383,7 @@ export default function Home() {
                 {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
                 <h3 className="mt-3">ANALYSIS</h3> {/* </Bounce> */}
               </div>
-              <div
-                
-                className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
-              >
+              <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
                 <Link href="">
                   <a href="" className="text-center">
                     {/* <Rotate bottom left> */}
@@ -437,11 +397,7 @@ export default function Home() {
                 {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
                 <h3 className="mt-3"> Research Minded</h3> {/* </Bounce> */}
               </div>
-              <div
-               
-                
-                className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
-              >
+              <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
                 <Link href="">
                   <a href="" className="text-center">
                     {/* <Rotate bottom left> */}
@@ -455,11 +411,7 @@ export default function Home() {
                 {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
                 <h3 className="mt-3">Writing</h3> {/* </Bounce> */}
               </div>
-              <div
-               
-                
-                className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
-              >
+              <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
                 <Link href="">
                   <a href="" className="text-center">
                     {/* <Rotate bottom left> */}
@@ -481,7 +433,7 @@ export default function Home() {
             <h3>Projects / Work</h3>
           </div>
 
-          <div  className="row background services3 mt-5">
+          <div className="row background services3 mt-5">
             <div className="col-7 pr-5"></div>
             <div className="col-md bg-custom-white pt-md-0 pt-5">
               <h3 className="primary-color pb-4 br-none">Bitpowr Technology</h3>
@@ -515,7 +467,6 @@ export default function Home() {
           </div>
 
           <div
-            
             className="row mt-5 background services2"
             style={{ backgroundPosition: "right" }}
           >
@@ -548,10 +499,7 @@ export default function Home() {
           </div>
 
           <div className="row mt-5">
-            <div
-              
-              className="col-xl-3 col-lg-4 col-md-6  px-3  position-relative overflow-hidden "
-            >
+            <div className="col-xl-3 col-lg-4 col-md-6  px-3  position-relative overflow-hidden mt-4">
               <div className="card w-100">
                 <div className="col-12  card_img charis"></div>
 
@@ -572,10 +520,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div
-              
-              className="col-xl-3 col-lg-4 col-md-6  px-3  position-relative overflow-hidden "
-            >
+            <div className="col-xl-3 col-lg-4 col-md-6  px-3  position-relative overflow-hidden mt-4">
               <div className="card w-100">
                 <div className="col-12  card_img charis"></div>
 
@@ -596,10 +541,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div
-              
-              className="col-xl-3 col-lg-4 col-md-6  px-3  position-relative overflow-hidden "
-            >
+            <div className="col-xl-3 col-lg-4 col-md-6  px-3  position-relative overflow-hidden mt-4">
               <div className="card w-100">
                 <div className="col-12  card_img charis"></div>
 
@@ -620,10 +562,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div
-              
-              className="col-xl-3 col-lg-4 col-md-6  px-3  position-relative overflow-hidden "
-            >
+            <div className="col-xl-3 col-lg-4 col-md-6  px-3  position-relative overflow-hidden mt-4">
               <div className="card w-100">
                 <div className="col-12  card_img charis"></div>
 
@@ -660,12 +599,12 @@ export default function Home() {
               What i love doing
             </h3>
 
-            <p >
+            <p>
               We are an online educator institute that aim to improve the skills
               of the student, the platform was founded in the year two thousand
               and twenty(2020), we love to educate student;
             </p>
-            <p >
+            <p>
               We build student educational carred with alot of examination
               avalable in our platform, we build lot of good interface for
               student so thta i can be easy to use for theme
@@ -694,7 +633,7 @@ export default function Home() {
           className="row  background contact"
           style={{ backgroundPosition: "left" }}
         >
-          <div  className="col-md-7 mt-sm-5 mt-0">
+          <div className="col-md-7 mt-sm-5 mt-0">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.1861678531354!2d3.2737085497191383!3d6.623782723805064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9158f2225c85%3A0x783690be25f73ff5!2sMethodist%20Church%20Nigeria%20(Aboru)%20Lagos%20Diocese!5e0!3m2!1sen!2sng!4v1589438909807!5m2!1sen!2sng"
               width="100%"
@@ -706,7 +645,7 @@ export default function Home() {
               tabindex="0"
             ></iframe>
           </div>
-          <div  className="col mt-5">
+          <div className="col mt-5">
             <h3 className="primary-color pb-4">Yes you need us</h3>
             <div className="row pb-5">
               <form onSubmit={handleSubmit} method="post" className="col">

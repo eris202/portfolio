@@ -367,6 +367,9 @@ height: auto !important;
       background: transparent !important;
       position: relative;
     }
+    .welcome-text{
+      font-size: 6vw;
+    }
     .mobileMenu{
       margin-top: 0 !important;
       padding-top: 0 !important;

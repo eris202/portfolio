@@ -195,7 +195,7 @@ export default function Home() {
                 architecture solutions and keyword research. Possesses excellent
                 problem-solving and analytical thinking skills.
               </p>
-              <a  className="btn fancy px-5 mt-5">
+              <a  className="btn fancy d-inline-block px-5 mt-5">
                 Visit{" "}
                 <img
                   style={{ width: "30px" }}
@@ -452,7 +452,7 @@ export default function Home() {
                 href="https://www.bitpowr.com"
                 target="
               _blank"
-                className="btn fancy px-4 mt-5"
+                className="btn fancy d-inline-block px-4 mt-5"
               >
                 <div className="d-flex">
                   <div className="mr-3">Visit site</div>{" "}
@@ -484,7 +484,7 @@ export default function Home() {
                 this by offering free education for all, by providing a platform
                 that lets us learn and teach by ourselves.
               </p>
-              <a href="https://lyty.dev" className="btn fancy px-4 mt-5">
+              <a href="https://lyty.dev" className="btn fancy d-inline-block px-4 mt-5">
                 <div className="d-flex">
                   <div className="mr-3">Visit site</div>{" "}
                   <img
@@ -610,7 +610,7 @@ export default function Home() {
               student so thta i can be easy to use for theme
             </p>
 
-            <a  className="btn fancy px-5 mt-5">
+            <a  className="btn fancy d-inline-block px-5 mt-5">
               Visit{" "}
               <img
                 style={{ width: "30px" }}
@@ -709,7 +709,7 @@ export default function Home() {
                     className="g-recaptcha"
                     data-sitekey="6LfPJPcUAAAAAIlrvwKwZ76TNwn5LUOerIgPTo2q"
                   ></div>
-                  <button type="submit" href="" className="btn fancy px-5 mt-5">
+                  <button type="submit" href="" className="btn fancy d-inline-block px-5 mt-5">
                     Contact us
                   </button>
                 </div>

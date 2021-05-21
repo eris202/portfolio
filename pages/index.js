@@ -195,7 +195,7 @@ export default function Home() {
                 architecture solutions and keyword research. Possesses excellent
                 problem-solving and analytical thinking skills.
               </p>
-              <a href="" className="btn fancy px-5 mt-5">
+              <a  className="btn fancy px-5 mt-5">
                 Visit{" "}
                 <img
                   style={{ width: "30px" }}
@@ -217,8 +217,8 @@ export default function Home() {
               <h3 className="primary-color pb-4 br-none">Web Development</h3>
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
-              <Link href="">
-                <a href="" className="text-center">
+              <Link href="#!">
+                <a  className="text-center">
                   {/* <Rotate bottom left> */}
                   <div className="skill-cont d-flex">
                     {/* <img */}
@@ -231,8 +231,8 @@ export default function Home() {
               <h3 className="mt-3">HTML</h3> {/* </Bounce> */}
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
-              <Link href="">
-                <a href="" className="text-center">
+              <Link href="#!">
+                <a  className="text-center">
                   {/* <Rotate bottom left> */}
                   <div className="skill-cont d-flex">
                     {/* <img */}
@@ -245,8 +245,8 @@ export default function Home() {
               <h3 className="mt-3">Pug</h3> {/* </Bounce> */}
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
-              <Link href="">
-                <a href="" className="text-center">
+              <Link href="#!">
+                <a  className="text-center">
                   {/* <Rotate top left> */}
                   <div className="skill-cont d-flex">
                     {/* <img */}
@@ -261,8 +261,8 @@ export default function Home() {
             </div>
 
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
-              <Link href="">
-                <a href="" className="text-center">
+              <Link href="#!">
+                <a  className="text-center">
                   {/* <Rotate bottom left> */}
                   <div className="skill-cont d-flex">
                     {/* <img */}
@@ -275,8 +275,8 @@ export default function Home() {
               <h3 className="mt-3">Sass</h3> {/* </Bounce> */}
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
-              <Link href="">
-                <a href="" className="text-center">
+              <Link href="#!">
+                <a  className="text-center">
                   {/* <Rotate bottom left> */}
                   <div className="skill-cont d-flex">
                     {/* <img */}
@@ -289,7 +289,7 @@ export default function Home() {
               <h3 className="mt-3">Bootstrap</h3> {/* </Bounce> */}
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
-              <Link href="">
+              <Link href="#!">
                 <a className="text-center">
                   {/* <Rotate top right> */}
                   <div className="skill-cont d-flex">
@@ -304,8 +304,8 @@ export default function Home() {
               {/* </Bounce> */}
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
-              <Link href="">
-                <a href="" className="text-center">
+              <Link href="#!">
+                <a  className="text-center">
                   {/* <Rotate bottom left> */}
                   <div className="skill-cont d-flex">
                     {/* <img */}
@@ -319,8 +319,8 @@ export default function Home() {
               {/* </Bounce> */}
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
-              <Link href="">
-                <a href="" className="text-center">
+              <Link href="#!">
+                <a  className="text-center">
                   {/* <Rotate bottom right> */}
                   <div className="skill-cont d-flex">
                     {/* <img */}
@@ -334,8 +334,8 @@ export default function Home() {
               {/* </Bounce> */}
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
-              <Link href="">
-                <a href="" className="text-center">
+              <Link href="#!">
+                <a  className="text-center">
                   {/* <Rotate top right> */}
                   <div className="skill-cont d-flex">
                     {/* <img */}
@@ -348,8 +348,8 @@ export default function Home() {
               <h3 className="mt-3">Next.js</h3> {/* </Bounce> */}
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
-              <Link href="">
-                <a href="" className="text-center">
+              <Link href="#!">
+                <a  className="text-center">
                   {/* <Rotate bottom left> */}
                   <div className="skill-cont d-flex">
                     {/* <img */}
@@ -370,8 +370,8 @@ export default function Home() {
 
             <div className="row">
               <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
-                <Link href="">
-                  <a href="" className="text-center">
+                <Link href="#!">
+                  <a  className="text-center">
                     {/* <Rotate bottom left> */}
                     <div className="skill-cont d-flex">
                       {/* <img */}
@@ -384,8 +384,8 @@ export default function Home() {
                 <h3 className="mt-3">ANALYSIS</h3> {/* </Bounce> */}
               </div>
               <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
-                <Link href="">
-                  <a href="" className="text-center">
+                <Link href="#!">
+                  <a  className="text-center">
                     {/* <Rotate bottom left> */}
                     <div className="skill-cont d-flex">
                       {/* <img */}
@@ -398,8 +398,8 @@ export default function Home() {
                 <h3 className="mt-3"> Research Minded</h3> {/* </Bounce> */}
               </div>
               <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
-                <Link href="">
-                  <a href="" className="text-center">
+                <Link href="#!">
+                  <a  className="text-center">
                     {/* <Rotate bottom left> */}
                     <div className="skill-cont d-flex">
                       {/* <img */}
@@ -412,8 +412,8 @@ export default function Home() {
                 <h3 className="mt-3">Writing</h3> {/* </Bounce> */}
               </div>
               <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
-                <Link href="">
-                  <a href="" className="text-center">
+                <Link href="#!">
+                  <a  className="text-center">
                     {/* <Rotate bottom left> */}
                     <div className="skill-cont d-flex">
                       {/* <img */}
@@ -610,7 +610,7 @@ export default function Home() {
               student so thta i can be easy to use for theme
             </p>
 
-            <a href="" className="btn fancy px-5 mt-5">
+            <a  className="btn fancy px-5 mt-5">
               Visit{" "}
               <img
                 style={{ width: "30px" }}

@@ -4,6 +4,8 @@ import Typewriter from "typewriter-effect";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import Axios from "axios";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import ModalComponent from "../components/modal";
 export default function Home() {
   const [data, setData] = useState({
@@ -18,7 +20,7 @@ export default function Home() {
   const [modalShow, setModalShow] = useState(false);
 
   useEffect(() => {
-    // AOS.init({ duration: 1000 });
+    AOS.init({ duration: 1000 });
   }, []);
 
   const handleChange = (e) => {
@@ -96,7 +98,7 @@ export default function Home() {
                   </div>
                   <div className={`col menu- ${showMenuList ? "show" : ""}`}>
                     <ul
-                      
+                      data-aos={showMenuList ? "fade-up-right" : ""}
                       className=" text-center text-md-right mobileMenu"
                     >
                       <li className="links-" data="home">
@@ -160,7 +162,7 @@ export default function Home() {
           </div>
         </div>
         <Link href="#skill">
-          <a  className="scll-cont d-inline-block" id="about-me">
+          <a data-aos="fade-in" className="scll-cont d-inline-block" id="about-me">
             <div className="scroll-bottom links-" data="about-us"></div>
           </a>
         </Link>
@@ -169,10 +171,10 @@ export default function Home() {
       {/* <!-- serivices --> */}
       <div>
         <div className="col-md-9 mx-auto my-5 text-centers services-s text-center">
-          <h2 >About me</h2>
+          <h2 data-aos="fade-in">About me</h2>
         </div>
         <div
-          
+          data-aos="fade-left"
           className="col-xl-9 col-lg-10 col-md-11 mx-auto  pb-5"
         >
           <div className="row background services">
@@ -221,7 +223,7 @@ export default function Home() {
               <h3 className="primary-color pb-4 br-none">Web Development</h3>
             </div>
             <div
-             
+              data-aos="fade-up"
               className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
             >
               <Link href="">
@@ -238,7 +240,7 @@ export default function Home() {
               <h3 className="mt-3">HTML</h3> {/* </Bounce> */}
             </div>
             <div
-              
+              data-aos="fade-down"
               className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
             >
               <Link href="">
@@ -255,7 +257,7 @@ export default function Home() {
               <h3 className="mt-3">Pug</h3> {/* </Bounce> */}
             </div>
             <div
-              
+              data-aos="fade-right"
               className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
             >
               <Link href="">
@@ -274,7 +276,7 @@ export default function Home() {
             </div>
 
             <div
-              
+              data-aos="fade-left"
               className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
             >
               <Link href="">
@@ -291,7 +293,7 @@ export default function Home() {
               <h3 className="mt-3">Sass</h3> {/* </Bounce> */}
             </div>
             <div
-              
+              data-aos="fade-up-right"
               className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
             >
               <Link href="">
@@ -308,7 +310,7 @@ export default function Home() {
               <h3 className="mt-3">Bootstrap</h3> {/* </Bounce> */}
             </div>
             <div
-              
+              data-aos="fade-up-left"
               className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
             >
               <Link href="">
@@ -326,7 +328,7 @@ export default function Home() {
               {/* </Bounce> */}
             </div>
             <div
-              
+              data-aos="fade-down-right"
               className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
             >
               <Link href="">
@@ -344,7 +346,7 @@ export default function Home() {
               {/* </Bounce> */}
             </div>
             <div
-              
+              data-aos="fade-down-left"
               className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
             >
               <Link href="">
@@ -362,7 +364,7 @@ export default function Home() {
               {/* </Bounce> */}
             </div>
             <div
-              
+              data-aos="flip-left"
               className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
             >
               <Link href="">
@@ -379,7 +381,7 @@ export default function Home() {
               <h3 className="mt-3">Next.js</h3> {/* </Bounce> */}
             </div>
             <div
-              
+              data-aos="flip-up"
               className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
             >
               <Link href="">
@@ -404,7 +406,7 @@ export default function Home() {
 
             <div className="row">
               <div
-                
+                data-aos="zoom-in"
                 className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
               >
                 <Link href="">
@@ -421,7 +423,7 @@ export default function Home() {
                 <h3 className="mt-3">ANALYSIS</h3> {/* </Bounce> */}
               </div>
               <div
-                
+                data-aos="zoom-in-down"
                 className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
               >
                 <Link href="">
@@ -438,8 +440,8 @@ export default function Home() {
                 <h3 className="mt-3"> Research Minded</h3> {/* </Bounce> */}
               </div>
               <div
-               
-                
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
                 className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
               >
                 <Link href="">
@@ -456,8 +458,8 @@ export default function Home() {
                 <h3 className="mt-3">Writing</h3> {/* </Bounce> */}
               </div>
               <div
-               
-                
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-center"
                 className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont"
               >
                 <Link href="">
@@ -481,7 +483,7 @@ export default function Home() {
             <h3>Projects / Work</h3>
           </div>
 
-          <div  className="row background services3 mt-5">
+          <div data-aos="zoom-in-up" className="row background services3 mt-5">
             <div className="col-7 pr-5"></div>
             <div className="col-md bg-custom-white pt-md-0 pt-5">
               <h3 className="primary-color pb-4 br-none">Bitpowr Technology</h3>
@@ -515,7 +517,7 @@ export default function Home() {
           </div>
 
           <div
-            
+            data-aos="fade-down-left"
             className="row mt-5 background services2"
             style={{ backgroundPosition: "right" }}
           >
@@ -549,7 +551,7 @@ export default function Home() {
 
           <div className="row mt-5">
             <div
-              
+              data-aos="fade-left"
               className="col-xl-3 col-lg-4 col-md-6  px-3  position-relative overflow-hidden "
             >
               <div className="card w-100">
@@ -573,7 +575,7 @@ export default function Home() {
               </div>
             </div>
             <div
-              
+              data-aos="zoom-out"
               className="col-xl-3 col-lg-4 col-md-6  px-3  position-relative overflow-hidden "
             >
               <div className="card w-100">
@@ -597,7 +599,7 @@ export default function Home() {
               </div>
             </div>
             <div
-              
+              data-aos="fade-down"
               className="col-xl-3 col-lg-4 col-md-6  px-3  position-relative overflow-hidden "
             >
               <div className="card w-100">
@@ -621,7 +623,7 @@ export default function Home() {
               </div>
             </div>
             <div
-              
+              data-aos="fade-right"
               className="col-xl-3 col-lg-4 col-md-6  px-3  position-relative overflow-hidden "
             >
               <div className="card w-100">
@@ -660,12 +662,12 @@ export default function Home() {
               What i love doing
             </h3>
 
-            <p >
+            <p data-aos="fade-left">
               We are an online educator institute that aim to improve the skills
               of the student, the platform was founded in the year two thousand
               and twenty(2020), we love to educate student;
             </p>
-            <p >
+            <p data-aos="fade-in">
               We build student educational carred with alot of examination
               avalable in our platform, we build lot of good interface for
               student so thta i can be easy to use for theme
@@ -694,7 +696,7 @@ export default function Home() {
           className="row  background contact"
           style={{ backgroundPosition: "left" }}
         >
-          <div  className="col-md-7 mt-sm-5 mt-0">
+          <div data-aos="fade-down" className="col-md-7 mt-sm-5 mt-0">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.1861678531354!2d3.2737085497191383!3d6.623782723805064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9158f2225c85%3A0x783690be25f73ff5!2sMethodist%20Church%20Nigeria%20(Aboru)%20Lagos%20Diocese!5e0!3m2!1sen!2sng!4v1589438909807!5m2!1sen!2sng"
               width="100%"
@@ -706,7 +708,7 @@ export default function Home() {
               tabindex="0"
             ></iframe>
           </div>
-          <div  className="col mt-5">
+          <div data-aos="flip-left" className="col mt-5">
             <h3 className="primary-color pb-4">Yes you need us</h3>
             <div className="row pb-5">
               <form onSubmit={handleSubmit} method="post" className="col">

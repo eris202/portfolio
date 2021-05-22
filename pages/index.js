@@ -627,7 +627,7 @@ export default function Home() {
         <div className="light-div pt-5">
           <div className="col-md-9 mx-auto mt-5 text-center">
             <h3 className="pb-4" style={{ color: "#fff" }}>
-              What i love doing
+              What i love doing !!!
             </h3>
 
             <p>
@@ -665,7 +665,7 @@ export default function Home() {
             ></iframe>
           </div>
           <div className="col mt-5">
-            <h3 className="primary-color pb-4">Yes you need us</h3>
+            <h3 className="primary-color pb-4">Am happy to hear from you !</h3>
             <div className="row pb-5">
               <form onSubmit={handleSubmit} method="post" className="col">
                 <input

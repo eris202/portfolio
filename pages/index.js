@@ -722,7 +722,7 @@ export default function Home() {
                     placeholder="Message"
                     rows="7"
                     required
-                    value={data.value}
+                    value={data.message}
                     minLength="10"
                     data-form-field="Message"
                   ></textarea>

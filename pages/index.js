@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 import Axios from "axios";
 import ModalComponent from "../components/modal";
 
@@ -24,10 +24,22 @@ export default function Home() {
   const [showMenuList, setShowMenuList] = useState(false);
   const [modalShow, setModalShow] = useState(false);
 
-  useEffect(() => {
-    // AOS.init({ duration: 1000 });
-  }, []);
+  useLayoutEffect(() => {
+    let getIsShow = document.querySelector(".scroll-top-container");
+    var getHeaderCont = document.querySelector("header");
 
+    window.onscroll = function () {
+      var getHeight = document.documentElement;
+      if (getHeight.scrollTop > 1000) {
+        console.log("Working");
+        getHeaderCont.classList.add("header-fixed");
+        getIsShow.style.opacity = 1;
+      } else {
+        getHeaderCont.classList.remove("header-fixed");
+        getIsShow.style.opacity = 0;
+      }
+    };
+  });
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
     console.log(data);
@@ -45,7 +57,7 @@ export default function Home() {
           name: "",
           email: "",
           phone: "",
-          message: ""
+          message: "",
         });
       })
       .catch((err) => {
@@ -84,9 +96,11 @@ export default function Home() {
       </Head>
 
       {/* <!-- scroll top --> */}
+    <a href="#home">
       <div className="scroll-top-container" title="Move To Top"></div>
+    </a>  
       {/* <!--  --> */}
-      <div className="overflow-hidden position-relative pb-3">
+      <div className="overflow-hidden position-relative pb-5" id="home">
         <div className="slider-cont home">
           <figure>
             <img src="./img/g1.jpg" alt="" srcset="" />
@@ -153,14 +167,14 @@ export default function Home() {
             {/* <!--  --> */}
             <div className={`welcome-text ${showMenuList ? "opacity-0" : ""}`}>
               <br />
-              Erisan Akorede
+              i'm Erisan Akorede
               <div className="d-inline position-relative overflow-hidden">
                 <div className="clearfix"></div>
                 <span
                   className="d-inline-block px-4"
                   style={{ backgroundColor: " rgba(62, 90, 251 ,.4)" }}
                 >
-                  I am a
+                  A
                 </span>
                 <Typewriter
                   options={{
@@ -181,7 +195,9 @@ export default function Home() {
         </div>
         <Link href="#skill">
           <a className="scll-cont d-inline-block" id="about-me">
-            <div className="scroll-bottom links-" data="about-us"></div>
+            <div className="scroll-bottom links-" data="about-us">
+              <img className="img-fluid" src="/img/arrow-up.svg" />
+            </div>
           </a>
         </Link>
       </div>
@@ -192,18 +208,15 @@ export default function Home() {
           <h2>About me</h2>
         </div>
         <div className="col-xl-9 col-lg-10 col-md-11 mx-auto  pb-5">
-          <div className="row background services">
-            <div className="col-md-7 ">
-              <img
-                src="/img/me.png"
-                className="mb-4 img-fluid d-md-none d-block"
-              />
+          <div className="row ">
+            <div className="col-md-7" >
+            <div className="imgcont background mx-auto services" style={{width:"90%"}}>
+
             </div>
-            <div className="col-md">
-              <h3 className="primary-color pb-4 br-none ">
-                Who Am i <br />
-                Summary
-              </h3>
+            
+            </div>
+            <div className="col-md mt-md-0 mt-3">
+              <h3 className="primary-color pb-4 br-none ">Who Am i</h3>
 
               <p>
                 Innovative Front End Developer with over 2 years experience
@@ -212,19 +225,13 @@ export default function Home() {
                 libraries and frameworks.
               </p>
               <p>
-                And also a highly driven and results-oriented SEO Specialist.
-                Adept in original content development search friendly
-                architecture solutions and keyword research. Possesses excellent
+                And also a highly driven and results-oriented SEO Expert. Adept
+                in original content development search friendly architecture
+                solutions and keyword research. Possesses excellent
                 problem-solving and analytical thinking skills.
               </p>
-              <a st className="btn fancy d-inline-block px-5 mt-5">
-                Visit site
-                <img
-                  style={{ width: "20px", marginLeft: "10px" }}
-                  className="img-fluid"
-                  src="/img/right-arrow.svg"
-                />
-              </a>
+              <div className="my-5 position-relative overflow-hidden"></div>
+              <div className="my-5 position-relative overflow-hidden"></div>
             </div>
           </div>
           {/* <!--  --> */}
@@ -473,7 +480,7 @@ export default function Home() {
                 href="https://www.bitpowr.com"
                 target="
               _blank"
-                className="btn fancy d-inline-block px-4 mt-5"
+                className="btn fancy d-inline-block px-4 mb-md-0 mb-5 mt-md-5 mt-2"
               >
                 <div className="d-flex">
                   <div className="mr-3">Visit site</div>{" "}
@@ -488,10 +495,10 @@ export default function Home() {
           </div>
 
           <div
-            className="row mt-5 background services2"
+            className="row mt-5 background  services2"
             style={{ backgroundPosition: "right" }}
           >
-            <div className="col-md mt-5">
+            <div className="col-md mt-5 mt-0">
               <h3 className="primary-color pb-4 br-none">L Y T Y</h3>
 
               <p>
@@ -532,13 +539,16 @@ export default function Home() {
                   <p className="card-text text-overflow">
                     Charis Investment and Construction Consult is solely into
                     Foreign Exchange Trading, Construction, Real Estate ,
-                    Logistics , Education and Agriculture ...
+                    Logistics , Education and Agriculture.
                   </p>
                   <button
                     data-title="Charis Financial investment"
-                    data-description="Charis Investment and Construction Consult is solely into
+                    data-description={`Charis Investment and Construction Consult is solely into
                     Foreign Exchange Trading, Construction, Real Estate ,
-                    Logistics , Education and Agriculture ..."
+                    Logistics , Education and Agriculture.
+                     Savings is putting your money to rest; Investing is putting your money to work. Charis provides a platform where you could put your money to work with full fidelity.
+
+`}
                     onClick={handleViewMore}
                     data-src="https://www.charisinvestment.com"
                     className="btn btn-primary"
@@ -548,66 +558,52 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-xl-3 col-lg-4 col-md-6  px-3  position-relative overflow-hidden mt-4">
+            {/* <div className="col-xl-3 col-lg-4 col-md-6  px-3  position-relative overflow-hidden mt-4">
               <div className="card w-100">
                 <div className="col-12  card_img charis"></div>
 
                 <div className="card-body">
-                  <h5 className="card-title">Charis Financial investment</h5>
+                  <h5 className="card-title">Payment Checkout System</h5>
                   <p className="card-text text-overflow">
                     Charis Investment and Construction Consult is solely into
                     Foreign Exchange Trading, Construction, Real Estate ,
-                    Logistics , Education and Agriculture ...
+                    Logistics , Education and Agriculture.
                   </p>
                   <button
-                    src="Wassup"
+                    data-title="Charis Financial investment"
+                    data-description={`Charis Investment and Construction Consult is solely into
+                    Foreign Exchange Trading, Construction, Real Estate ,
+                    Logistics , Education and Agriculture.
+                     Savings is putting your money to rest; Investing is putting your money to work. Charis provides a platform where you could put your money to work with full fidelity.
+
+`}
                     onClick={handleViewMore}
+                    data-src="https://www.charisinvestment.com"
                     className="btn btn-primary"
                   >
                     View
                   </button>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="col-xl-3 col-lg-4 col-md-6  px-3  position-relative overflow-hidden mt-4">
               <div className="card w-100">
-                <div className="col-12  card_img portfolio"></div>
+                <div className="col-12  card_img faker"></div>
 
                 <div className="card-body">
-                  <h5 className="card-title">Portfolio Website</h5>
+                  <h5 className="card-title">Faker NG</h5>
                   <p className="card-text text-overflow">
-                    This is an opensource portfolio website for anyone who will
-                    to showcase his skill and experience through a personal
-                    poerfolio website.
+                    Faker NG is an online tool to generate a fake nigerian
+                    information/data,, (e.g Name, State , Gender e.t.c)
                   </p>
                   <button
-                    data-title="Portfolio Website"
-                    data-description="This is an opensource portfolio website for anyone who will
-                    to showcase his skill and experience through a personal
-                    poerfolio website."
+                    data-title="Faker NG"
+                    data-description="Faker NG is an online tool to generate a fake nigerian
+                    information/data,, (e.g Name, State , Gender e.t.c). With a single button, 
+                    you can generate thousands data in JSON or List format."
                     onClick={handleViewMore}
-                    data-src="https://www.erisan.herokuapp.com"
-                    className="btn btn-primary"
-                  >
-                    View
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-3 col-lg-4 col-md-6  px-3  position-relative overflow-hidden mt-4">
-              <div className="card w-100">
-                <div className="col-12  card_img charis"></div>
-
-                <div className="card-body">
-                  <h5 className="card-title">Charis Financial investment</h5>
-                  <p className="card-text text-overflow">
-                    Charis Investment and Construction Consult is solely into
-                    Foreign Exchange Trading, Construction, Real Estate ,
-                    Logistics , Education and Agriculture ...
-                  </p>
-                  <button
-                    src="Wassup"
-                    onClick={handleViewMore}
+                    data-src="https://faker-ng.herokuapp.com
+                    "
                     className="btn btn-primary"
                   >
                     View
@@ -619,10 +615,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="pt-5"></div>
+      <div className="pt-5 hobby"></div>
       {/* <!-- about --> */}
-      <div className="col-xl-9 col-lg-10 mx-auto about-us text-center py-5">
-        <h2>Hobbie</h2>
+      <div
+        id="hobby"
+        className="col-xl-9 col-lg-10 mx-auto about-us text-center py-5"
+      >
+        <h2>Hobby</h2>
       </div>
       <div className="about_us">
         <div className="light-div pt-5">
@@ -632,11 +631,11 @@ export default function Home() {
             </h3>
 
             <p>
-              While i spend most of my time on computer , I love to reading tech
+              While i spend most of my time on computer , I love reading tech
               related articles on the web.
             </p>
             <p>
-              During the weekend, i love to go to amusement part or sport
+              During the weekend, i love to go to an amusement park or sport
               station to relax.
             </p>
           </div>

@@ -41,6 +41,12 @@ export default function Home() {
         setLoading(false);
         setSuccess(res.data.msg);
         setError(null);
+        setData({
+          name: "",
+          email: "",
+          phone: "",
+          message: ""
+        });
       })
       .catch((err) => {
         setLoading(false);
@@ -676,6 +682,7 @@ export default function Home() {
                     type="text"
                     className="form-control form-valid"
                     name="name"
+                    value={data.name}
                     required=""
                     placeholder="Fullname* e.g Erisan Akorede"
                     data-form-field="Name"
@@ -688,6 +695,7 @@ export default function Home() {
                     type="email"
                     className="form-control form-valid"
                     name="email"
+                    value={data.email}
                     required
                     placeholder="Email*"
                     data-form-field="Email"
@@ -698,6 +706,7 @@ export default function Home() {
                   <input
                     onChange={handleChange}
                     type="tel"
+                    value={data.phone}
                     className="form-control form-valid"
                     name="phone"
                     placeholder="Phone"
@@ -713,6 +722,7 @@ export default function Home() {
                     placeholder="Message"
                     rows="7"
                     required
+                    value={data.value}
                     minLength="10"
                     data-form-field="Message"
                   ></textarea>

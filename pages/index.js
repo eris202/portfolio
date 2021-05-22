@@ -40,10 +40,13 @@ export default function Home() {
       .then((res) => {
         setLoading(false);
         setSuccess(res.data.msg);
+        setError(null);
       })
       .catch((err) => {
         setLoading(false);
+
         setError(err.response.data.msg);
+        setSuccess(false);
       });
   };
 
@@ -716,7 +719,7 @@ export default function Home() {
                   <span className="danger-color"></span>
                 </div>
                 <div className="text-center">
-                <div class="text-success">{success && success}</div>
+                  <div class="text-success">{success && success}</div>
                   <div class="text-danger">{error && error}</div>
                   <button
                     disabled={loading}
@@ -726,7 +729,6 @@ export default function Home() {
                   >
                     {loading ? "Sending ..." : "Contact me"}
                   </button>
-                  
                 </div>
               </form>
             </div>

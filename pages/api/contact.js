@@ -11,11 +11,10 @@ export default function (req, res) {
     to: "erisanakorede@gmail.com",
     subject:
       "Erisan , I have a message from a client through my portfolio website",
-    HTML: `<div>
+    text: `
     phone: ${phone}
-    <br/>
     Message: ${req.body.message}
-    </div>`,
+    `,
   };
 
   if (req.body.name.trim() == "" || req.body.name < 3) {

@@ -1,8 +1,22 @@
 // const handler = require("./handler")
+const mailgun = require("mailgun-js");
 
 export default function (req, res) {
-  console.log(req.method);
-  console.log(req.body);
+  let phone = req.body.phone ? req.body.phone : "No phone number";
+  const DOMAIN = "sandbox1a1b58cdfdbe4c8188804a05c3ab3fb7.mailgun.org";
+  const api_key = "0b24b4461696027f461d5e06ca71f26a-6ae2ecad-51a67839";
+  const mg = mailgun({ apiKey: api_key, domain: DOMAIN });
+  const data = {
+    from: `My Portfolio ${req.body.email}`,
+    to: "erisanakorede@gmail.com",
+    subject:
+      "Erisan , I have a message from a client through my portfolio website",
+    HTML: `<div>
+    phone: ${phone}
+    <br/>
+    Message: ${req.body.message}
+    </div>`,
+  };
 
   if (req.body.name.trim() == "" || req.body.name < 3) {
     res.status(400).json({ message: "Please provide a name" });
@@ -22,15 +36,18 @@ export default function (req, res) {
     return;
   }
 
-  var templateParams = {
-    name:  req.body.name,
-    notes: 'Check this out!'
-};
- 
-emailjs.send('<YOUR SERVICE ID>','<YOUR TEMPLATE ID>', templateParams)
-    .then(function(response) {
-       console.log('SUCCESS!', response.status, response.text);
-    }, function(err) {
-       console.log('FAILED...', err);
-    });
+  mg.messages().send(data, function (error, body) {
+    if (error) {
+      res
+        .status(501)
+        .json({ error: error, msg: "Something went wrong, retry !!!" });
+
+      return;
+    }
+    if (body) {
+      res.status(200).json({
+        msg: "Thanks for contacting me, i will get back to you in a bit.",
+      });
+    }
+  });
 }

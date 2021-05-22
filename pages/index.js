@@ -15,6 +15,12 @@ export default function Home() {
   });
 
   const [src, setSrc] = useState("");
+  const [loading, setLoading] = useState("");
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
+  const [description, setDescription] = useState("");
+  const [title, setTitle] = useState("");
+  const [link, setLink] = useState("");
   const [showMenuList, setShowMenuList] = useState(false);
   const [modalShow, setModalShow] = useState(false);
 
@@ -28,20 +34,24 @@ export default function Home() {
   };
 
   const handleSubmit = (e) => {
+    setLoading(true);
     e.preventDefault();
     Axios.post("/api/contact", { ...data })
       .then((res) => {
-        console.log(res);
-        console.log("Success");
+        setLoading(false);
+        setSuccess(res.data.msg);
       })
       .catch((err) => {
-        console.log("error occured");
-        console.log(err.response);
+        setLoading(false);
+        setError(err.response.data.msg);
       });
   };
 
   function handleViewMore(e) {
-    setSrc(e.target.getAttribute("src"));
+    setTitle(e.target.getAttribute("data-title"));
+    setSrc(e.target.getAttribute("data-src"));
+    setDescription(e.target.getAttribute("data-description"));
+    setLink(e.target.getAttribute("data-link"));
     setModalShow(true);
   }
 
@@ -51,6 +61,9 @@ export default function Home() {
 
       <ModalComponent
         src={src}
+        title={title}
+        description={description}
+        link={link}
         show={modalShow}
         onHide={() => setModalShow(false)}
       />
@@ -131,7 +144,7 @@ export default function Home() {
             {/* <!--  --> */}
             <div className={`welcome-text ${showMenuList ? "opacity-0" : ""}`}>
               <br />
-              My name is Erisan Akorede
+              Erisan Akorede
               <div className="d-inline position-relative overflow-hidden">
                 <div className="clearfix"></div>
                 <span
@@ -144,7 +157,7 @@ export default function Home() {
                   options={{
                     strings: [
                       "frontend developer",
-                      " search engine optimization specialist",
+                      " search engine optimization expert",
                     ],
                     autoStart: true,
                     loop: true,
@@ -195,14 +208,13 @@ export default function Home() {
                 architecture solutions and keyword research. Possesses excellent
                 problem-solving and analytical thinking skills.
               </p>
-              <a  className="btn fancy d-inline-block px-5 mt-5">
-                Visit{" "}
+              <a st className="btn fancy d-inline-block px-5 mt-5">
+                Visit site
                 <img
-                  style={{ width: "30px" }}
+                  style={{ width: "20px", marginLeft: "10px" }}
                   className="img-fluid"
                   src="/img/right-arrow.svg"
-                />{" "}
-                site
+                />
               </a>
             </div>
           </div>
@@ -218,7 +230,7 @@ export default function Home() {
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="#!">
-                <a  className="text-center">
+                <a className="text-center">
                   {/* <Rotate bottom left> */}
                   <div className="skill-cont d-flex">
                     {/* <img */}
@@ -232,7 +244,7 @@ export default function Home() {
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="#!">
-                <a  className="text-center">
+                <a className="text-center">
                   {/* <Rotate bottom left> */}
                   <div className="skill-cont d-flex">
                     {/* <img */}
@@ -246,7 +258,7 @@ export default function Home() {
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="#!">
-                <a  className="text-center">
+                <a className="text-center">
                   {/* <Rotate top left> */}
                   <div className="skill-cont d-flex">
                     {/* <img */}
@@ -262,7 +274,7 @@ export default function Home() {
 
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="#!">
-                <a  className="text-center">
+                <a className="text-center">
                   {/* <Rotate bottom left> */}
                   <div className="skill-cont d-flex">
                     {/* <img */}
@@ -276,7 +288,7 @@ export default function Home() {
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="#!">
-                <a  className="text-center">
+                <a className="text-center">
                   {/* <Rotate bottom left> */}
                   <div className="skill-cont d-flex">
                     {/* <img */}
@@ -305,7 +317,7 @@ export default function Home() {
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="#!">
-                <a  className="text-center">
+                <a className="text-center">
                   {/* <Rotate bottom left> */}
                   <div className="skill-cont d-flex">
                     {/* <img */}
@@ -320,7 +332,7 @@ export default function Home() {
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="#!">
-                <a  className="text-center">
+                <a className="text-center">
                   {/* <Rotate bottom right> */}
                   <div className="skill-cont d-flex">
                     {/* <img */}
@@ -335,7 +347,7 @@ export default function Home() {
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="#!">
-                <a  className="text-center">
+                <a className="text-center">
                   {/* <Rotate top right> */}
                   <div className="skill-cont d-flex">
                     {/* <img */}
@@ -349,7 +361,7 @@ export default function Home() {
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="#!">
-                <a  className="text-center">
+                <a className="text-center">
                   {/* <Rotate bottom left> */}
                   <div className="skill-cont d-flex">
                     {/* <img */}
@@ -371,7 +383,7 @@ export default function Home() {
             <div className="row">
               <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
                 <Link href="#!">
-                  <a  className="text-center">
+                  <a className="text-center">
                     {/* <Rotate bottom left> */}
                     <div className="skill-cont d-flex">
                       {/* <img */}
@@ -385,7 +397,7 @@ export default function Home() {
               </div>
               <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
                 <Link href="#!">
-                  <a  className="text-center">
+                  <a className="text-center">
                     {/* <Rotate bottom left> */}
                     <div className="skill-cont d-flex">
                       {/* <img */}
@@ -399,7 +411,7 @@ export default function Home() {
               </div>
               <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
                 <Link href="#!">
-                  <a  className="text-center">
+                  <a className="text-center">
                     {/* <Rotate bottom left> */}
                     <div className="skill-cont d-flex">
                       {/* <img */}
@@ -413,7 +425,7 @@ export default function Home() {
               </div>
               <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
                 <Link href="#!">
-                  <a  className="text-center">
+                  <a className="text-center">
                     {/* <Rotate bottom left> */}
                     <div className="skill-cont d-flex">
                       {/* <img */}
@@ -484,7 +496,10 @@ export default function Home() {
                 this by offering free education for all, by providing a platform
                 that lets us learn and teach by ourselves.
               </p>
-              <a href="https://lyty.dev" className="btn fancy d-inline-block px-4 mt-5">
+              <a
+                href="https://lyty.dev"
+                className="btn fancy d-inline-block px-4 mt-5"
+              >
                 <div className="d-flex">
                   <div className="mr-3">Visit site</div>{" "}
                   <img
@@ -511,8 +526,12 @@ export default function Home() {
                     Logistics , Education and Agriculture ...
                   </p>
                   <button
-                    src="Wassup"
+                    data-title="Charis Financial investment"
+                    data-description="Charis Investment and Construction Consult is solely into
+                    Foreign Exchange Trading, Construction, Real Estate ,
+                    Logistics , Education and Agriculture ..."
                     onClick={handleViewMore}
+                    data-src="https://www.charisinvestment.com"
                     className="btn btn-primary"
                   >
                     View
@@ -543,18 +562,22 @@ export default function Home() {
             </div>
             <div className="col-xl-3 col-lg-4 col-md-6  px-3  position-relative overflow-hidden mt-4">
               <div className="card w-100">
-                <div className="col-12  card_img charis"></div>
+                <div className="col-12  card_img portfolio"></div>
 
                 <div className="card-body">
-                  <h5 className="card-title">Charis Financial investment</h5>
+                  <h5 className="card-title">Portfolio Website</h5>
                   <p className="card-text text-overflow">
-                    Charis Investment and Construction Consult is solely into
-                    Foreign Exchange Trading, Construction, Real Estate ,
-                    Logistics , Education and Agriculture ...
+                    This is an opensource portfolio website for anyone who will
+                    to showcase his skill and experience through a personal
+                    poerfolio website.
                   </p>
                   <button
-                    src="Wassup"
+                    data-title="Portfolio Website"
+                    data-description="This is an opensource portfolio website for anyone who will
+                    to showcase his skill and experience through a personal
+                    poerfolio website."
                     onClick={handleViewMore}
+                    data-src="https://www.erisan.herokuapp.com"
                     className="btn btn-primary"
                   >
                     View
@@ -600,25 +623,13 @@ export default function Home() {
             </h3>
 
             <p>
-              We are an online educator institute that aim to improve the skills
-              of the student, the platform was founded in the year two thousand
-              and twenty(2020), we love to educate student;
+              While i spend most of my time on computer , I love to reading tech
+              related articles on the web.
             </p>
             <p>
-              We build student educational carred with alot of examination
-              avalable in our platform, we build lot of good interface for
-              student so thta i can be easy to use for theme
+              During the weekend, i love to go to amusement part or sport
+              station to relax.
             </p>
-
-            <a  className="btn fancy d-inline-block px-5 mt-5">
-              Visit{" "}
-              <img
-                style={{ width: "30px" }}
-                className="img-fluid"
-                src="/img/right-arrow.svg"
-              />{" "}
-              site
-            </a>
           </div>
         </div>
       </div>
@@ -705,13 +716,17 @@ export default function Home() {
                   <span className="danger-color"></span>
                 </div>
                 <div className="text-center">
-                  <div
-                    className="g-recaptcha"
-                    data-sitekey="6LfPJPcUAAAAAIlrvwKwZ76TNwn5LUOerIgPTo2q"
-                  ></div>
-                  <button type="submit" href="" className="btn fancy d-inline-block px-5 mt-5">
-                    Contact us
+                <div class="text-success">{success && success}</div>
+                  <div class="text-danger">{error && error}</div>
+                  <button
+                    disabled={loading}
+                    type="submit"
+                    href=""
+                    className="btn fancy d-inline-block px-5 mt-5"
+                  >
+                    {loading ? "Sending ..." : "Contact me"}
                   </button>
+                  
                 </div>
               </form>
             </div>

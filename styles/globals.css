@@ -189,6 +189,10 @@
   .card_img.charis{
     background-image: url("../public//img/charis.png");
   }
+  .card_img.portfolio{
+    background-image: url("../public//img/portfolio.png");
+
+  }
   @keyframes welcome-slider {
     0%,
     20% {
@@ -346,7 +350,7 @@ height: auto !important;
   }
   .btn.fancy {
     background: linear-gradient(#3e5afb, #5166e4, #3e5afb);
-    color: #ffffff;
+    color: #ffffff !important;
     padding: 10px;
     border-top-right-radius: 40px;
     border-bottom-left-radius: 40px;
@@ -357,7 +361,7 @@ height: auto !important;
     transition: all 0.4s ease-in-out !important; 
     background: #ffffff;
     border-color: #3e5afb;
-    color: #3e5afb;
+    color: #3e5afb !important;
   }
   .mobile-menu {
     display: none;
@@ -476,8 +480,8 @@ height: auto !important;
 
   @media (max-width: 380px){
     .skill-cont{
-      width:120px;
-      height: 120px;
+      width:140px;
+      height: 140px;
     }
   }
   

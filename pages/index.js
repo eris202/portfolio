@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState, useEffect, useLayoutEffect } from "react";
 import Axios from "axios";
 import ModalComponent from "../components/modal";
+import { AnimatedOnScroll } from "react-animated-css-onscroll";
 
 export default function Home() {
   const [data, setData] = useState({
@@ -96,9 +97,9 @@ export default function Home() {
       </Head>
 
       {/* <!-- scroll top --> */}
-    <a href="#home">
-      <div className="scroll-top-container" title="Move To Top"></div>
-    </a>  
+      <a href="#home">
+        <div className="scroll-top-container" title="Move To Top"></div>
+      </a>
       {/* <!--  --> */}
       <div className="overflow-hidden position-relative pb-5" id="home">
         <div className="slider-cont home">
@@ -209,11 +210,11 @@ export default function Home() {
         </div>
         <div className="col-xl-9 col-lg-10 col-md-11 mx-auto  pb-5">
           <div className="row ">
-            <div className="col-md-7" >
-            <div className="imgcont background mx-auto services" style={{width:"90%"}}>
-
-            </div>
-            
+            <div className="col-md-7">
+              <div
+                className="imgcont background mx-auto services"
+                style={{ width: "90%" }}
+              ></div>
             </div>
             <div className="col-md mt-md-0 mt-3">
               <h3 className="primary-color pb-4 br-none ">Who Am i</h3>
@@ -287,7 +288,7 @@ export default function Home() {
               <h3 className="mt-3">CSS</h3>
               {/* </Bounce> */}
             </div>
-
+           
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="#!">
                 <a className="text-center">
@@ -790,6 +791,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+   
     </>
   );
 }

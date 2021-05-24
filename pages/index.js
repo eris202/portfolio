@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useState, useEffect, useLayoutEffect } from "react";
 import Axios from "axios";
 import ModalComponent from "./modal";
-import { AnimatedOnScroll } from "react-animated-css-onscroll";
 
 export default function Home() {
   const [data, setData] = useState({

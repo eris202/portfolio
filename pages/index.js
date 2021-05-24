@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 import Link from "next/link";
 import { useState, useEffect, useLayoutEffect } from "react";
 import Axios from "axios";
-import ModalComponent from "../components/modal";
+import ModalComponent from "./modal";
 import { AnimatedOnScroll } from "react-animated-css-onscroll";
 
 export default function Home() {
@@ -242,7 +242,7 @@ export default function Home() {
             style={{ backgroundPosition: "right" }}
           >
             <div className="col-12 text-center">
-              <h2 className="text-left">Skills</h2>
+              <h2 className="text-left">SKills & Tools</h2>
               <h3 className="primary-color pb-4 br-none">Web Development</h3>
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
@@ -379,6 +379,20 @@ export default function Home() {
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="#!">
                 <a className="text-center">
+                  {/* <Rotate top right> */}
+                  <div className="skill-cont d-flex">
+                    {/* <img */}
+                    <img src="/img/vue.png" layout="fill" alt="Gatsby" />
+                  </div>
+                  {/* </Rotate> */}
+                </a>
+              </Link>
+              {/* <Bounce enter={true} mirror={true} opposite={true} bottom cascade> */}{" "}
+              <h3 className="mt-3">Vue.js</h3> {/* </Bounce> */}
+            </div>
+            <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
+              <Link href="#!">
+                <a className="text-center">
                   {/* <Rotate bottom left> */}
                   <div className="skill-cont d-flex">
                     {/* <img */}
@@ -389,6 +403,48 @@ export default function Home() {
               </Link>
               {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
               <h3 className="mt-3">Nodejs</h3> {/* </Bounce> */}
+            </div>
+            <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
+              <Link href="#!">
+                <a className="text-center">
+                  {/* <Rotate bottom left> */}
+                  <div className="skill-cont d-flex">
+                    {/* <img */}
+                    <img src="/img/jquery.png" layout="fill" alt="Node" />
+                  </div>
+                  {/* </Rotate> */}
+                </a>
+              </Link>
+              {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
+              <h3 className="mt-3">JQuery</h3> {/* </Bounce> */}
+            </div>
+            <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
+              <Link href="#!">
+                <a className="text-center">
+                  {/* <Rotate bottom left> */}
+                  <div className="skill-cont d-flex">
+                    {/* <img */}
+                    <img src="/img/git.png" layout="fill" alt="Node" />
+                  </div>
+                  {/* </Rotate> */}
+                </a>
+              </Link>
+              {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
+              <h3 className="mt-3">Git</h3> {/* </Bounce> */}
+            </div>
+            <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
+              <Link href="#!">
+                <a className="text-center">
+                  {/* <Rotate bottom left> */}
+                  <div className="skill-cont d-flex">
+                    {/* <img */}
+                    <img src="/img/npm.png" layout="fill" alt="Node" />
+                  </div>
+                  {/* </Rotate> */}
+                </a>
+              </Link>
+              {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
+              <h3 className="mt-3">NPM</h3> {/* </Bounce> */}
             </div>
           </div>
 

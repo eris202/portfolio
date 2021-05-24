@@ -149,6 +149,11 @@ export default function Home() {
                         </a>
                       </li>
                       <li className="links-" data="about-us">
+                        <a href="/img/my-resume.pdf" target="_blank" className="px-3">
+                          Resume
+                        </a>
+                      </li>
+                      <li className="links-" data="about-us">
                         <a href="#hobby" className="px-3">
                           Hobby
                         </a>

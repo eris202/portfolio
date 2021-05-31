@@ -149,7 +149,11 @@ export default function Home() {
                         </a>
                       </li>
                       <li className="links-" data="about-us">
-                        <a href="/img/my-resume.pdf" target="_blank" className="px-3">
+                        <a
+                          href="/img/my-resume.pdf"
+                          target="_blank"
+                          className="px-3"
+                        >
                           Resume
                         </a>
                       </li>
@@ -224,7 +228,7 @@ export default function Home() {
               <h3 className="primary-color pb-4 br-none ">Who Am i</h3>
 
               <p>
-                Innovative Front End Developer with over 2 years experience
+                Innovative Front End Developer with over 3 years experience
                 building and maintaining responsive websites in the tech
                 industry. Proficient in HTML, CSS, JavaScript; plus modern
                 libraries and frameworks.
@@ -292,7 +296,7 @@ export default function Home() {
               <h3 className="mt-3">CSS</h3>
               {/* </Bounce> */}
             </div>
-           
+
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="#!">
                 <a className="text-center">
@@ -851,7 +855,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-   
     </>
   );
 }

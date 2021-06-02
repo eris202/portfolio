@@ -321,7 +321,7 @@ footer {
   box-shadow: -2px 4px 3px gray;
   transform: scale(1);
 }
-.imgcont{
+.imgcont {
   height: 400px;
   position: relative;
   overflow: hidden;
@@ -504,5 +504,15 @@ footer {
 @media (max-width: 300px) {
   .background.services2 {
     padding-top: 125px;
+  }
+  .gridcont h3 {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 290px) {
+  .skill-cont {
+    width: 80px !important;
+    height: 80px !important;
   }
 }

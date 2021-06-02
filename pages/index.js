@@ -219,7 +219,7 @@ export default function Home() {
 
       {/* <!-- serivices --> */}
       <div>
-        <div className="col-md-9 mx-auto my-5 text-centers services-s text-center">
+        <div className="col-md-9 mx-auto my-sm-5 mt-3 mb-0 text-centers services-s text-center">
           <h2>About me</h2>
         </div>
         <div className="col-xl-9 col-lg-10 col-md-11 mx-auto  pb-5">
@@ -249,14 +249,14 @@ export default function Home() {
                 solutions and keyword research. Possesses excellent
                 problem-solving and analytical thinking skills.
               </p>
-              <div className="my-5 position-relative overflow-hidden"></div>
-              <div className="my-5 position-relative overflow-hidden"></div>
+              <div className="my-sm-5 my-0 position-relative overflow-hidden"></div>
+              <div className="my-sm-5 my-0  position-relative overflow-hidden"></div>
             </div>
           </div>
           {/* <!--  --> */}
           <div className="pt-4" id="skill"></div>
           <div
-            className="row mt-5 background "
+            className="row mt-sm-5 mt-0 background "
             style={{ backgroundPosition: "right" }}
           >
             <div className="col-12 text-center">
@@ -438,7 +438,7 @@ export default function Home() {
               <Link href="#!">
                 <a className="text-center">
                   {/* <Rotate bottom left> */}
-                  <div className="skill-cont d-flex" data-aos="">
+                  <div className="skill-cont d-flex" data-aos="flip-down">
                     {/* <img */}
                     <img src="/img/node.png" layout="fill" alt="Node" />
                   </div>
@@ -446,7 +446,7 @@ export default function Home() {
                 </a>
               </Link>
               {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
-              <h3 className="mt-3" data-aos="">
+              <h3 className="mt-3" data-aos="slide-right">
                 Nodejs
               </h3>{" "}
               {/* </Bounce> */}
@@ -455,7 +455,7 @@ export default function Home() {
               <Link href="#!">
                 <a className="text-center">
                   {/* <Rotate bottom left> */}
-                  <div className="skill-cont d-flex" data-aos="">
+                  <div className="skill-cont d-flex" data-aos="fade">
                     {/* <img */}
                     <img src="/img/jquery.png" layout="fill" alt="Node" />
                   </div>
@@ -463,7 +463,7 @@ export default function Home() {
                 </a>
               </Link>
               {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
-              <h3 className="mt-3" data-aos="">
+              <h3 className="mt-3" data-aos="fade">
                 JQuery
               </h3>{" "}
               {/* </Bounce> */}
@@ -472,7 +472,7 @@ export default function Home() {
               <Link href="#!">
                 <a className="text-center">
                   {/* <Rotate bottom left> */}
-                  <div className="skill-cont d-flex" data-aos="">
+                  <div className="skill-cont d-flex" data-aos="slide-right">
                     {/* <img */}
                     <img src="/img/git.png" layout="fill" alt="Node" />
                   </div>
@@ -480,7 +480,7 @@ export default function Home() {
                 </a>
               </Link>
               {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
-              <h3 className="mt-3" data-aos="">
+              <h3 className="mt-3" data-aos="zoom-out-up">
                 Git
               </h3>{" "}
               {/* </Bounce> */}
@@ -489,7 +489,7 @@ export default function Home() {
               <Link href="#!">
                 <a className="text-center">
                   {/* <Rotate bottom left> */}
-                  <div className="skill-cont d-flex" data-aos="">
+                  <div className="skill-cont d-flex" data-aos="zoom-in">
                     {/* <img */}
                     <img src="/img/npm.png" layout="fill" alt="Node" />
                   </div>
@@ -497,7 +497,7 @@ export default function Home() {
                 </a>
               </Link>
               {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
-              <h3 className="mt-3" data-aos="">
+              <h3 className="mt-3" data-aos="zoom-out">
                 NPM
               </h3>{" "}
               {/* </Bounce> */}
@@ -505,7 +505,10 @@ export default function Home() {
           </div>
 
           <div className="col-12 mt-5 mb-4">
-            <h3 className="primary-color  text-center pb-4 br-none">
+            <h3
+              className="primary-color  text-center pb-4 br-none"
+              data-aos="zoom-in"
+            >
               Search Engine Oprimization ( SEO)
             </h3>
 
@@ -514,7 +517,7 @@ export default function Home() {
                 <Link href="#!">
                   <a className="text-center">
                     {/* <Rotate bottom left> */}
-                    <div className="skill-cont d-flex" data-aos="">
+                    <div className="skill-cont d-flex" data-aos="slide-right">
                       {/* <img */}
                       <img src="/img/analytics.png" layout="fill" alt="Node" />
                     </div>
@@ -522,7 +525,7 @@ export default function Home() {
                   </a>
                 </Link>
                 {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
-                <h3 className="mt-3" data-aos="">
+                <h3 className="mt-3" data-aos="zoom-out">
                   ANALYSIS
                 </h3>{" "}
                 {/* </Bounce> */}
@@ -531,7 +534,7 @@ export default function Home() {
                 <Link href="#!">
                   <a className="text-center">
                     {/* <Rotate bottom left> */}
-                    <div className="skill-cont d-flex" data-aos="">
+                    <div className="skill-cont d-flex" data-aos="slide-left">
                       {/* <img */}
                       <img src="/img/research.png" layout="fill" alt="Node" />
                     </div>
@@ -539,7 +542,7 @@ export default function Home() {
                   </a>
                 </Link>
                 {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
-                <h3 className="mt-3" data-aos="">
+                <h3 className="mt-3" data-aos="flip-right">
                   {" "}
                   Research Minded
                 </h3>{" "}
@@ -622,7 +625,7 @@ export default function Home() {
           </div>
 
           <div
-            className="row mt-5 background  services2"
+            className="row mt-sm-5 mt-0 background  services2"
             style={{ backgroundPosition: "right" }}
           >
             <div className="col-md mt-5 mt-0">

@@ -404,7 +404,7 @@ export default function Home() {
               <Link href="#!">
                 <a className="text-center">
                   {/* <Rotate top right> */}
-                  <div className="skill-cont d-flex" data-aos="">
+                  <div className="skill-cont d-flex" data-aos="slide-down">
                     {/* <img */}
                     <img src="/img/next.png" layout="fill" alt="Gatsby" />
                   </div>
@@ -412,7 +412,7 @@ export default function Home() {
                 </a>
               </Link>
               {/* <Bounce enter={true} mirror={true} opposite={true} bottom cascade> */}{" "}
-              <h3 className="mt-3" data-aos="">
+              <h3 className="mt-3" data-aos="slide-up">
                 Next.js
               </h3>{" "}
               {/* </Bounce> */}
@@ -421,7 +421,7 @@ export default function Home() {
               <Link href="#!">
                 <a className="text-center">
                   {/* <Rotate top right> */}
-                  <div className="skill-cont d-flex" data-aos="">
+                  <div className="skill-cont d-flex" data-aos="fade-down-right">
                     {/* <img */}
                     <img src="/img/vue.png" layout="fill" alt="Gatsby" />
                   </div>
@@ -429,7 +429,7 @@ export default function Home() {
                 </a>
               </Link>
               {/* <Bounce enter={true} mirror={true} opposite={true} bottom cascade> */}{" "}
-              <h3 className="mt-3" data-aos="">
+              <h3 className="mt-3" data-aos="fade-left">
                 Vue.js
               </h3>{" "}
               {/* </Bounce> */}

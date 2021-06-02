@@ -1,12 +1,18 @@
 import Head from "next/head";
 import Image from "next/image";
+
 import Typewriter from "typewriter-effect";
 import Link from "next/link";
 import { useState, useEffect, useLayoutEffect } from "react";
 import Axios from "axios";
 import ModalComponent from "./modal";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 export default function Home() {
+  useEffect(() => {
+    Aos.init({ duration: 1000, delay: "100" });
+  }, []);
+
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -218,7 +224,11 @@ export default function Home() {
         </div>
         <div className="col-xl-9 col-lg-10 col-md-11 mx-auto  pb-5">
           <div className="row ">
-            <div className="col-md-7">
+            <div
+              className="col-md-7"
+              data-aos="fade-zoom-in"
+              data-aos-delay="1000"
+            >
               <div
                 className="imgcont background mx-auto services"
                 style={{ width: "90%" }}
@@ -227,13 +237,13 @@ export default function Home() {
             <div className="col-md mt-md-0 mt-3">
               <h3 className="primary-color pb-4 br-none ">Who Am i</h3>
 
-              <p>
+              <p data-aos="fade-zoom-in">
                 Innovative Front End Developer with over 3 years experience
                 building and maintaining responsive websites in the tech
                 industry. Proficient in HTML, CSS, JavaScript; plus modern
                 libraries and frameworks.
               </p>
-              <p>
+              <p data-aos="fade-in">
                 And also a highly driven and results-oriented SEO Expert. Adept
                 in original content development search friendly architecture
                 solutions and keyword research. Possesses excellent
@@ -257,7 +267,7 @@ export default function Home() {
               <Link href="#!">
                 <a className="text-center">
                   {/* <Rotate bottom left> */}
-                  <div className="skill-cont d-flex">
+                  <div data-aos="fade-in" className="skill-cont d-flex">
                     {/* <img */}
                     <img src="/img/html.jpg" layout="fill" alt="Node" />
                   </div>
@@ -265,13 +275,16 @@ export default function Home() {
                 </a>
               </Link>
               {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
-              <h3 className="mt-3">HTML</h3> {/* </Bounce> */}
+              <h3 className="mt-3" data-aos="zoom-in-left">
+                HTML
+              </h3>{" "}
+              {/* </Bounce> */}
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="#!">
                 <a className="text-center">
                   {/* <Rotate bottom left> */}
-                  <div className="skill-cont d-flex">
+                  <div className="skill-cont d-flex" data-aos="slide-right">
                     {/* <img */}
                     <img src="/img/pug.png" layout="fill" alt="Node" />
                   </div>
@@ -279,13 +292,16 @@ export default function Home() {
                 </a>
               </Link>
               {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
-              <h3 className="mt-3">Pug</h3> {/* </Bounce> */}
+              <h3 className="mt-3" data-aos="zoom-in-up">
+                Pug
+              </h3>{" "}
+              {/* </Bounce> */}
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="#!">
                 <a className="text-center">
                   {/* <Rotate top left> */}
-                  <div className="skill-cont d-flex">
+                  <div className="skill-cont d-flex" data-aos="zoom-out">
                     {/* <img */}
                     <img src="/img/css.png" layout="fill" alt="CSS" />
                   </div>
@@ -293,7 +309,9 @@ export default function Home() {
                 </a>
               </Link>
               {/* <Bounce enter={true} mirror={true} opposite={true} bottom cascade> */}{" "}
-              <h3 className="mt-3">CSS</h3>
+              <h3 className="mt-3" data-aos="flip-left">
+                CSS
+              </h3>
               {/* </Bounce> */}
             </div>
 
@@ -301,7 +319,7 @@ export default function Home() {
               <Link href="#!">
                 <a className="text-center">
                   {/* <Rotate bottom left> */}
-                  <div className="skill-cont d-flex">
+                  <div className="skill-cont d-flex" data-aos="flip-left">
                     {/* <img */}
                     <img src="/img/sass.png" layout="fill" alt="Node" />
                   </div>
@@ -309,13 +327,16 @@ export default function Home() {
                 </a>
               </Link>
               {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
-              <h3 className="mt-3">Sass</h3> {/* </Bounce> */}
+              <h3 className="mt-3" data-aos="flip-down">
+                Sass
+              </h3>{" "}
+              {/* </Bounce> */}
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="#!">
                 <a className="text-center">
                   {/* <Rotate bottom left> */}
-                  <div className="skill-cont d-flex">
+                  <div className="skill-cont d-flex" data-aos="slide-right">
                     {/* <img */}
                     <img src="/img/bootstrap.jpg" layout="fill" alt="Node" />
                   </div>
@@ -323,13 +344,16 @@ export default function Home() {
                 </a>
               </Link>
               {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
-              <h3 className="mt-3">Bootstrap</h3> {/* </Bounce> */}
+              <h3 className="mt-3" data-aos="slide-up">
+                Bootstrap
+              </h3>{" "}
+              {/* </Bounce> */}
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="#!">
                 <a className="text-center">
                   {/* <Rotate top right> */}
-                  <div className="skill-cont d-flex">
+                  <div className="skill-cont d-flex" data-aos="slide-up">
                     {/* <img */}
                     <img src="/img/Js.png" layout="fill" alt="Javascript" />
                   </div>
@@ -337,14 +361,16 @@ export default function Home() {
                 </a>
               </Link>
               {/* <Bounce enter={true} mirror={true} opposite={true} bottom cascade> */}{" "}
-              <h3 className="mt-3">JavaScript</h3>
+              <h3 className="mt-3" data-aos="zoom-in-right">
+                JavaScript
+              </h3>
               {/* </Bounce> */}
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="#!">
                 <a className="text-center">
                   {/* <Rotate bottom left> */}
-                  <div className="skill-cont d-flex">
+                  <div className="skill-cont d-flex" data-aos="slide-left">
                     {/* <img */}
                     <img src="/img/react.jpg" layout="fill" alt="React" />
                   </div>
@@ -352,14 +378,16 @@ export default function Home() {
                 </a>
               </Link>
               {/* <Bounce enter={true} mirror={true} opposite={true} bottom cascade> */}{" "}
-              <h3 className="mt-3">Reactjs</h3>
+              <h3 className="mt-3" data-aos="slide-right">
+                Reactjs
+              </h3>
               {/* </Bounce> */}
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="#!">
                 <a className="text-center">
                   {/* <Rotate bottom right> */}
-                  <div className="skill-cont d-flex">
+                  <div className="skill-cont d-flex" data-aos="slide-up">
                     {/* <img */}
                     <img src="/img/gatsby.png" layout="fill" alt="Gatsby" />
                   </div>
@@ -367,14 +395,16 @@ export default function Home() {
                 </a>
               </Link>
               {/* <Bounce enter={true} mirror={true} opposite={true} bottom cascade> */}{" "}
-              <h3 className="mt-3">Gatsby.js</h3>
+              <h3 className="mt-3" data-aos="fade-right">
+                Gatsby.js
+              </h3>
               {/* </Bounce> */}
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="#!">
                 <a className="text-center">
                   {/* <Rotate top right> */}
-                  <div className="skill-cont d-flex">
+                  <div className="skill-cont d-flex" data-aos="">
                     {/* <img */}
                     <img src="/img/next.png" layout="fill" alt="Gatsby" />
                   </div>
@@ -382,13 +412,16 @@ export default function Home() {
                 </a>
               </Link>
               {/* <Bounce enter={true} mirror={true} opposite={true} bottom cascade> */}{" "}
-              <h3 className="mt-3">Next.js</h3> {/* </Bounce> */}
+              <h3 className="mt-3" data-aos="">
+                Next.js
+              </h3>{" "}
+              {/* </Bounce> */}
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="#!">
                 <a className="text-center">
                   {/* <Rotate top right> */}
-                  <div className="skill-cont d-flex">
+                  <div className="skill-cont d-flex" data-aos="">
                     {/* <img */}
                     <img src="/img/vue.png" layout="fill" alt="Gatsby" />
                   </div>
@@ -396,13 +429,16 @@ export default function Home() {
                 </a>
               </Link>
               {/* <Bounce enter={true} mirror={true} opposite={true} bottom cascade> */}{" "}
-              <h3 className="mt-3">Vue.js</h3> {/* </Bounce> */}
+              <h3 className="mt-3" data-aos="">
+                Vue.js
+              </h3>{" "}
+              {/* </Bounce> */}
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="#!">
                 <a className="text-center">
                   {/* <Rotate bottom left> */}
-                  <div className="skill-cont d-flex">
+                  <div className="skill-cont d-flex" data-aos="">
                     {/* <img */}
                     <img src="/img/node.png" layout="fill" alt="Node" />
                   </div>
@@ -410,13 +446,16 @@ export default function Home() {
                 </a>
               </Link>
               {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
-              <h3 className="mt-3">Nodejs</h3> {/* </Bounce> */}
+              <h3 className="mt-3" data-aos="">
+                Nodejs
+              </h3>{" "}
+              {/* </Bounce> */}
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="#!">
                 <a className="text-center">
                   {/* <Rotate bottom left> */}
-                  <div className="skill-cont d-flex">
+                  <div className="skill-cont d-flex" data-aos="">
                     {/* <img */}
                     <img src="/img/jquery.png" layout="fill" alt="Node" />
                   </div>
@@ -424,13 +463,16 @@ export default function Home() {
                 </a>
               </Link>
               {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
-              <h3 className="mt-3">JQuery</h3> {/* </Bounce> */}
+              <h3 className="mt-3" data-aos="">
+                JQuery
+              </h3>{" "}
+              {/* </Bounce> */}
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="#!">
                 <a className="text-center">
                   {/* <Rotate bottom left> */}
-                  <div className="skill-cont d-flex">
+                  <div className="skill-cont d-flex" data-aos="">
                     {/* <img */}
                     <img src="/img/git.png" layout="fill" alt="Node" />
                   </div>
@@ -438,13 +480,16 @@ export default function Home() {
                 </a>
               </Link>
               {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
-              <h3 className="mt-3">Git</h3> {/* </Bounce> */}
+              <h3 className="mt-3" data-aos="">
+                Git
+              </h3>{" "}
+              {/* </Bounce> */}
             </div>
             <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
               <Link href="#!">
                 <a className="text-center">
                   {/* <Rotate bottom left> */}
-                  <div className="skill-cont d-flex">
+                  <div className="skill-cont d-flex" data-aos="">
                     {/* <img */}
                     <img src="/img/npm.png" layout="fill" alt="Node" />
                   </div>
@@ -452,7 +497,10 @@ export default function Home() {
                 </a>
               </Link>
               {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
-              <h3 className="mt-3">NPM</h3> {/* </Bounce> */}
+              <h3 className="mt-3" data-aos="">
+                NPM
+              </h3>{" "}
+              {/* </Bounce> */}
             </div>
           </div>
 
@@ -466,7 +514,7 @@ export default function Home() {
                 <Link href="#!">
                   <a className="text-center">
                     {/* <Rotate bottom left> */}
-                    <div className="skill-cont d-flex">
+                    <div className="skill-cont d-flex" data-aos="">
                       {/* <img */}
                       <img src="/img/analytics.png" layout="fill" alt="Node" />
                     </div>
@@ -474,13 +522,16 @@ export default function Home() {
                   </a>
                 </Link>
                 {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
-                <h3 className="mt-3">ANALYSIS</h3> {/* </Bounce> */}
+                <h3 className="mt-3" data-aos="">
+                  ANALYSIS
+                </h3>{" "}
+                {/* </Bounce> */}
               </div>
               <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
                 <Link href="#!">
                   <a className="text-center">
                     {/* <Rotate bottom left> */}
-                    <div className="skill-cont d-flex">
+                    <div className="skill-cont d-flex" data-aos="">
                       {/* <img */}
                       <img src="/img/research.png" layout="fill" alt="Node" />
                     </div>
@@ -488,13 +539,17 @@ export default function Home() {
                   </a>
                 </Link>
                 {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
-                <h3 className="mt-3"> Research Minded</h3> {/* </Bounce> */}
+                <h3 className="mt-3" data-aos="">
+                  {" "}
+                  Research Minded
+                </h3>{" "}
+                {/* </Bounce> */}
               </div>
               <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
                 <Link href="#!">
                   <a className="text-center">
                     {/* <Rotate bottom left> */}
-                    <div className="skill-cont d-flex">
+                    <div className="skill-cont d-flex" data-aos="">
                       {/* <img */}
                       <img src="/img/writing.png" layout="fill" alt="Node" />
                     </div>
@@ -502,13 +557,16 @@ export default function Home() {
                   </a>
                 </Link>
                 {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
-                <h3 className="mt-3">Writing</h3> {/* </Bounce> */}
+                <h3 className="mt-3" data-aos="">
+                  Writing
+                </h3>{" "}
+                {/* </Bounce> */}
               </div>
               <div className="col-xl col-lg-3 col-md-4 col-6 text-center overflow-hidden position-relative gridcont">
                 <Link href="#!">
                   <a className="text-center">
                     {/* <Rotate bottom left> */}
-                    <div className="skill-cont d-flex">
+                    <div className="skill-cont d-flex" data-aos="">
                       {/* <img */}
                       <img src="/img/thinking.jpeg" layout="fill" alt="Node" />
                     </div>
@@ -516,7 +574,11 @@ export default function Home() {
                   </a>
                 </Link>
                 {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
-                <h3 className="mt-3"> Critical Thinking</h3> {/* </Bounce> */}
+                <h3 className="mt-3" data-aos="">
+                  {" "}
+                  Critical Thinking
+                </h3>{" "}
+                {/* </Bounce> */}
               </div>
             </div>
           </div>

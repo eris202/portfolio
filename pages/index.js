@@ -552,7 +552,7 @@ export default function Home() {
                 <Link href="#!">
                   <a className="text-center">
                     {/* <Rotate bottom left> */}
-                    <div className="skill-cont d-flex" data-aos="">
+                    <div className="skill-cont d-flex" data-aos="slide-down">
                       {/* <img */}
                       <img src="/img/writing.png" layout="fill" alt="Node" />
                     </div>
@@ -560,7 +560,7 @@ export default function Home() {
                   </a>
                 </Link>
                 {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
-                <h3 className="mt-3" data-aos="">
+                <h3 className="mt-3" data-aos="flip-down">
                   Writing
                 </h3>{" "}
                 {/* </Bounce> */}
@@ -569,7 +569,7 @@ export default function Home() {
                 <Link href="#!">
                   <a className="text-center">
                     {/* <Rotate bottom left> */}
-                    <div className="skill-cont d-flex" data-aos="">
+                    <div className="skill-cont d-flex" data-aos="fade-down">
                       {/* <img */}
                       <img src="/img/thinking.jpeg" layout="fill" alt="Node" />
                     </div>
@@ -577,7 +577,7 @@ export default function Home() {
                   </a>
                 </Link>
                 {/* <Bounce enter={true} mirror={true}  opposite={true} bottom cascade> */}{" "}
-                <h3 className="mt-3" data-aos="">
+                <h3 className="mt-3" data-aos="fade-up">
                   {" "}
                   Critical Thinking
                 </h3>{" "}
@@ -586,8 +586,8 @@ export default function Home() {
             </div>
           </div>
           {/* <!--  --> */}
-          <div className="pt-5"></div>
-          <div className="col-12 mt-5 mb-4">
+          <div className="pt-sm-5 pt-0"></div>
+          <div className="col-12 mt-5 mb-4" data-aos="fade-up">
             <h3>Projects / Work</h3>
           </div>
 
@@ -596,12 +596,12 @@ export default function Home() {
             <div className="col-md bg-custom-white pt-md-0 pt-5">
               <h3 className="primary-color pb-4 br-none">Bitpowr Technology</h3>
 
-              <p>
+              <p data-aos="fade-up">
                 Bitpowr is a blockchain payment solution that supports and
                 powers every type of use case, and is also scalable. Blockchain
                 provides a new and secure way to execute financial transactions.
               </p>
-              <p>
+              <p data-aos="fade-up">
                 For ambitious companies around the world, BitPowr makes moving
                 money as simple, borderless, and programmable as the rest of the
                 internet.
@@ -628,16 +628,16 @@ export default function Home() {
             className="row mt-sm-5 mt-0 background  services2"
             style={{ backgroundPosition: "right" }}
           >
-            <div className="col-md mt-5 mt-0">
+            <div className="col-md mt-5 position-relative overflow-hidden mt-0">
               <h3 className="primary-color pb-4 br-none">L Y T Y</h3>
 
-              <p>
+              <p data-aos="slide-down">
                 Lyty.dev is a platform to learn anything online for free. The
                 learning resources inludes but are not limited to: HTML
                 tutorial, CSS tutorial and JavaScript tutorials. LYTY stands for
                 Learn Yourself Teach Yourself.
               </p>
-              <p>
+              <p data-aos="slide-left">
                 Learning oughts to be free and bidrectional, so Lyty aims to do
                 this by offering free education for all, by providing a platform
                 that lets us learn and teach by ourselves.
@@ -665,8 +665,10 @@ export default function Home() {
                 <div className="col-12  card_img charis"></div>
 
                 <div className="card-body">
-                  <h5 className="card-title">Charis Financial investment</h5>
-                  <p className="card-text text-overflow">
+                  <h5 className="card-title" data-aos="slide-left">
+                    Charis Financial investment
+                  </h5>
+                  <p className="card-text text-overflow" data-aos="fade-up">
                     Charis Investment and Construction Consult is solely into
                     Foreign Exchange Trading, Construction, Real Estate ,
                     Logistics , Education and Agriculture.
@@ -721,8 +723,10 @@ export default function Home() {
                 <div className="col-12  card_img faker"></div>
 
                 <div className="card-body">
-                  <h5 className="card-title">Faker NG</h5>
-                  <p className="card-text text-overflow">
+                  <h5 className="card-title" data-aos="flip-right">
+                    Faker NG
+                  </h5>
+                  <p className="card-text text-overflow" data-aos="fade">
                     Faker NG is an online tool to generate a fake nigerian
                     information/data,, (e.g Name, State , Gender e.t.c)
                   </p>
@@ -755,17 +759,17 @@ export default function Home() {
       </div>
       <div className="about_us">
         <div className="light-div pt-5">
-          <div className="col-md-9 mx-auto mt-5 text-center">
-            <h3 className="pb-4" style={{ color: "#fff" }}>
+          <div className="col-md-9 mx-auto mt-5 text-center position-reltive overflow-hidden">
+            <h3 className="pb-4" data-aos="flip-left" style={{ color: "#fff" }}>
               What i love doing !!!
             </h3>
 
-            <p>
+            <p data-aos="slide-left">
               While i spend most of my time on computer , I love reading tech
               related articles on the web.
             </p>
-            <p>
-              During the weekend, i love to go to an amusement park or sport
+            <p data-aos="fade-down">
+              During the weekend, i love going to an amusement park or sport
               station to relax.
             </p>
           </div>
@@ -794,10 +798,15 @@ export default function Home() {
               tabindex="0"
             ></iframe>
           </div>
-          <div className="col mt-5">
+          <div className="col mt-5 position-reltive overflow-hidden">
             <h3 className="primary-color pb-4">Am happy to hear from you !</h3>
             <div className="row pb-5">
-              <form onSubmit={handleSubmit} method="post" className="col">
+              <form
+                onSubmit={handleSubmit}
+                data-aos="slide-down"
+                method="post"
+                className="col"
+              >
                 <input
                   onChange={handleChange}
                   type="hidden"

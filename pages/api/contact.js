@@ -3,8 +3,8 @@ const mailgun = require("mailgun-js");
 
 export default function (req, res) {
   let phone = req.body.phone ? req.body.phone : "No phone number";
-  const DOMAIN = "sandbox1a1b58cdfdbe4c8188804a05c3ab3fb7.mailgun.org";
-  const api_key = "0b24b4461696027f461d5e06ca71f26a-6ae2ecad-51a67839";
+  const DOMAIN = process.env.DOMAIN;
+  const api_key = process.env.api_key;
   const mg = mailgun({ apiKey: api_key, domain: DOMAIN });
   const data = {
     from: `My Portfolio ${req.body.email}`,

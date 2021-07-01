@@ -788,7 +788,7 @@ export default function Home() {
         >
           <div className="col-md-7 mt-sm-5 mt-0">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.1861678531354!2d3.2737085497191383!3d6.623782723805064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9158f2225c85%3A0x783690be25f73ff5!2sMethodist%20Church%20Nigeria%20(Aboru)%20Lagos%20Diocese!5e0!3m2!1sen!2sng!4v1589438909807!5m2!1sen!2sng"
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253682.63269182143!2d3.1438718715333005!3d6.548035697907908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1625156197924!5m2!1sen!2sng"
               width="100%"
               height="450"
               frameborder="0"

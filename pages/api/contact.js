@@ -8,9 +8,9 @@ export default function (req, res) {
   const mg = mailgun({ apiKey: api_key, domain: DOMAIN });
   const data = {
     from: `My Portfolio ${req.body.email}`,
-    to: "erisanakorede@gmail.com",
+    to: "akoredeerisan@gmail.com",
     subject:
-      "Erisan , I have a message from a client through my portfolio website",
+      "Action Required: Erisan , I have a message from a client through my portfolio website",
     text: `
     phone: ${phone}
     Message: ${req.body.message}

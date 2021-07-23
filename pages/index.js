@@ -690,6 +690,33 @@ export default function Home() {
                 </div>
               </div>
             </div>
+                  <div className="col-xl-3 col-lg-4 col-md-6  px-3  position-relative overflow-hidden mt-4">
+              <div className="card w-100">
+                <div className="col-12  card_img dashboard"></div>
+
+                <div className="card-body">
+                  <h5 className="card-title" data-aos="slide-left">
+                    Dashboard Design 
+                  </h5>
+                  <p className="card-text text-overflow" data-aos="fade-up">
+                    This is a simple dashboard template built wih React. This template can be used  for any project which which require a dashboard page.
+                    
+                  
+                  </p>
+                  <button
+                    data-title="Dashboard Design"
+                    data-description={`This is a simple dashboard template built wih React. This template can be used  for any project which which require a dashboard page.
+
+`}
+                    onClick={handleViewMore}
+                    data-src="http://erisan-dashboard.herokuapp.com/"
+                    className="btn btn-primary"
+                  >
+                    View
+                  </button>
+                </div>
+              </div>
+            </div>
             {/* <div className="col-xl-3 col-lg-4 col-md-6  px-3  position-relative overflow-hidden mt-4">
               <div className="card w-100">
                 <div className="col-12  card_img charis"></div>

@@ -188,6 +188,11 @@ header.header-fixed ul li {
 .card_img.charis {
   background-image: url("../public//img/charis.png");
 }
+.card_img.dashboard{
+  background-image: url("../public//img/dashboard.png");
+  /* backss */
+
+}
 .card_img.faker {
   background-image: url("../public/img/faker.png");
 }
